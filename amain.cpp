@@ -1,5 +1,6 @@
 // BRIDGE
-// by Andrew Garcia, PhD
+// Connecting array data between Python and C++ through the use of JSON files
+// Andrew Garcia, PhD
 
 #include <iostream>
 #include <iomanip>
@@ -9,12 +10,13 @@ using json = nlohmann::json;
 
 int main()
 {
-    // template / sample string
+    // template / sample string (dictionary of keys (DOK))
+    std::cout << "DOK:" << std::endl;
     char string[] = R"(
      {
-         "map": [[1,2],[1,5],[6,9]],
-         "value": [1,6,3],
-         "objdims" : [10,10]
+         "map": [[1,2],[1,4],[0,3]],
+         "value": [1,2,3],
+         "objdims" : [5,5]
      }
      )";
 
@@ -24,20 +26,47 @@ int main()
 
     nlohmann::basic_json<> loman{deserl};
 
+    std::vector<int> arraydims = loman["objdims"];
+
     std::vector<int> vector;
 
-    int map_dims{static_cast<int>(loman["map"][0].size())};
-
-    for (int i = 0; i < loman["value"].size(); i++)
+    if (arraydims.size() == 1)
     {
-        for (int j = 0; j < map_dims; j++)
-            vector.push_back(loman["map"][i][j]);
+        int N{arraydims[0]};
+        vector.resize(N);
+
+        for (int c = 0; c < loman["value"].size(); c++)
+        {
+            int x{loman["map"][c][0]};
+            vector[x] = loman["value"][c];
+        }
+    }
+    else if (arraydims.size() == 2)
+    {
+        int Y{arraydims[0]}, X{arraydims[1]};
+        vector.resize(Y * X);
+
+        for (int c = 0; c < loman["value"].size(); c++)
+        {
+            int y{loman["map"][c][0]}, x{loman["map"][c][1]};
+            vector[Y * y + x] = loman["value"][c];
+        }
+    }
+    else
+    {
+        int Z{arraydims[0]}, Y{arraydims[1]}, X{arraydims[2]};
+        vector.resize(Z * Y * X);
+        for (int c = 0; c < loman["value"].size(); c++)
+        {
+            int z{loman["map"][c][0]}, y{loman["map"][c][1]}, x{loman["map"][c][2]};
+            vector[(Z * Y) * z + Y * y + x] = loman["value"][c];
+        }
     }
 
+    std::cout << "\nvectorized array: " << std::endl;
     for (int i = 0; i < vector.size(); i++)
     {
         std::cout << vector[i] << " ";
     }
-
     std::cout << std::endl;
 }

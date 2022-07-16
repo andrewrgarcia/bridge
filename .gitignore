@@ -1,2 +1,4 @@
 #klang-compiled executables
 *.k 
+
+.vscode
