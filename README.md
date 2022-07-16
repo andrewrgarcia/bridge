@@ -2,6 +2,10 @@
 
 Connecting array data between Python and C++ through the use of JSON files
 
+
+[MIT License - Copyright (c) 2022 Andrew Garcia, PhD] (https://raw.githubusercontent.com/andrewrgarcia/bridge/main/LICENSE)
+
+
 `out.txt`
 ```ruby
 DOK:
