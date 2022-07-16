@@ -5,22 +5,18 @@
 #include <iostream>
 #include <iomanip>
 #include <nlohmann/json.hpp>
+#include <fstream>
 
 using json = nlohmann::json;
 
 int main()
 {
-    // template / sample string (dictionary of keys (DOK))
+    // dictionary of keys (DOK)
     std::cout << "DOK:" << std::endl;
-    char string[] = R"(
-     {
-         "map": [[1,2],[1,4],[0,3]],
-         "value": [1,2,3],
-         "objdims" : [5,5]
-     }
-     )";
 
-    json deserl = json::parse(string); // deserialization ("parsing")
+    std::ifstream i("sample.json"); // load JSON
+    json deserl;
+    i >> deserl;
 
     std::cout << std::setw(4) << deserl << std::endl; // print neatly
 
