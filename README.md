@@ -3,6 +3,7 @@
 Connecting array data between Python and C++ through the use of JSON files
 
 `out.txt`
+```ruby
 DOK:
 {
     "map": [
@@ -32,3 +33,4 @@ DOK:
 
 vectorized array: 
 0 0 0 3 0 0 0 1 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+```
