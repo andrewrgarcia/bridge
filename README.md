@@ -1,7 +1,7 @@
 # bridge
 
 Connecting array data between Python and C++ through the use of JSON files. 
-Python and C++ modules use **tojson** and **jsonload** functions to convert array to .json DOK (Dictionary of Keys) and viceversa, respectively. See Usage Examples below. 
+Python and C++ modules use **tojson** and **jsonload** functions to convert arrays to .json DOK (Dictionary of Keys) and viceversa, respectively. See Usage Examples below. 
 
 ## Contributors
 
