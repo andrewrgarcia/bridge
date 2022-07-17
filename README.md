@@ -1,7 +1,21 @@
 # bridge
 
-Connecting array data between Python and C++ through the use of JSON files. DOK = Dictionary of Keys (json)
+Connecting array data between Python and C++ through the use of JSON files. 
+Python and C++ modules use **tojson** and **jsonload** functions to convert array to .json DOK (Dictionary of Keys) and viceversa, respectively. See Usage Examples below. 
 
+## Contributors
+
+- [Andrew Garcia](https://github.com/andrewrgarcia) - creator and maintainer
+
+## Contributing
+
+1. Fork it (<https://github.com/your-github-user/tensorscout/fork>)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+## Sample Output
 ```ruby
 array to DOK:
 {
@@ -19,18 +33,6 @@ array to DOK:
 DOK to array:
 [0. 2. 0. 0. 3. 2. 0. 0. 2. 2.]
 ```
-
-## Contributors
-
-- [Andrew Garcia](https://github.com/andrewrgarcia) - creator and maintainer
-
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/tensorscout/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
 
 ## Usage Examples
 
@@ -79,3 +81,6 @@ array_form = bridge.jsonload('sample.json')
 'print vector'
 print('array:\n',array_form)
 ```
+
+
+
