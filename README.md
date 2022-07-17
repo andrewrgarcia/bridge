@@ -1,6 +1,7 @@
 # bridge
 
 Connecting array data between Python and C++ through the use of JSON files
+
 [MIT License - Copyright (c) 2022 Andrew Garcia, PhD](LICENSE)
 
 **out.txt**
