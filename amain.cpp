@@ -22,7 +22,7 @@ int main()
 
     nlohmann::basic_json<> loman{deserl};
 
-    std::vector<int> arraydims = loman["objdims"];
+    std::vector<int> arraydims = loman["odims"];
 
     std::vector<int> vector;
 

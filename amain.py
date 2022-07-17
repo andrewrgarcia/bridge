@@ -1,38 +1,47 @@
 import json
 import numpy as np
 
-def oneD():
-    arr = np.zeros(arraydims[0])
+def oneD(data):
+    arr = np.zeros(data["odims"])
     for c in range(len(data['map'])):
-        x = data['map'][c]
-        arr[x] = np.array(data['value'])[c]
+        x = data['map'][c][0]
+        arr[x] = data['value'][c]
     return arr
 
-def twoD():
-    Y,X = arraydims
+def twoD(data):
+    Y,X = data["odims"]
     arr = np.zeros((Y,X))
     for c in range(len(data['map'])):
         y,x = data['map'][c]
-        arr[y,x] =  arr_values[c]
+        arr[y,x] =  data['value'][c]
     return arr
 
-def threeD():
-    Z,Y,X = arraydims
+def threeD(data):
+    Z,Y,X = data["odims"]
     arr = np.zeros((Z,Y,X))
     for c in range(len(data['map'])):
         z,y,x = data['map'][c]
         arr[z,y,x] = data['value'][c]
     return arr
 
-proc = { 1: oneD,  2: twoD,  3: threeD }
+def load(filename):
 
-file = open('sample.json')
-data = json.load(file)
+    proc = { 1: oneD,  2: twoD,  3: threeD }
 
-print('DOK:\n',data)
+    file = open(filename+'.json')
+    data = json.load(file)
 
-data['map']
-arraydims = np.array(data["objdims"])
-arr_values = np.array(data['value'])
+    print('DOK:\n',data)
 
-print('multidimensional array:\n',proc[arraydims.shape[0]]())
+    # data['map']
+    DIM = len(data["odims"])
+    print(DIM)
+    # arr_values = np.array(data["value"])
+
+    array = proc[DIM](data)
+
+    return array
+
+array_form = load('sample')
+
+print('multidimensional array:\n',array_form)

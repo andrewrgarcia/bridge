@@ -1,38 +1,38 @@
-# bridge 
+# bridge
 
 Connecting array data between Python and C++ through the use of JSON files
 [MIT License - Copyright (c) 2022 Andrew Garcia, PhD](LICENSE)
 
+**out.txt**
 
-`out.txt`
 ```ruby
 DOK:
 {
     "map": [
         [
-            1,
-            2
+            0
         ],
         [
-            1,
-            4
+            1
         ],
         [
-            0,
-            3
+            5
+        ],
+        [
+            8
         ]
     ],
-    "objdims": [
-        5,
-        5
+    "odims": [
+        10
     ],
     "value": [
+        3,
+        3,
         1,
-        2,
-        3
+        2
     ]
 }
 
-vectorized array: 
-0 0 0 3 0 0 0 1 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+vectorized array:
+3 3 0 0 0 1 0 0 2 0
 ```
