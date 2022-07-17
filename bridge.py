@@ -58,7 +58,7 @@ def tojson(filename, array):
     dict = fundict[DIM](array)
     
     print(dict)
-    with open(filename+'.json', 'w') as f:
+    with open(filename, 'w') as f:
         f.write(str(dict).replace("'","\"")) 
 
     return dict
@@ -91,7 +91,7 @@ def jsonload(filename):
 
     proc = { 1: oneD,  2: twoD,  3: threeD }
 
-    file = open(filename+'.json')
+    file = open(filename)
     data = json.load(file)
 
     print('DOK:\n',data)
@@ -106,6 +106,3 @@ def jsonload(filename):
     return array
 
 
-array_form = jsonload('sample')
-
-print('multidimensional array:\n',array_form)
