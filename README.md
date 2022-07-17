@@ -1,39 +1,23 @@
 # bridge
 
-Connecting array data between Python and C++ through the use of JSON files
+Connecting array data between Python and C++ through the use of JSON files. DOK = Dictionary of Keys (json)
 
 [MIT License - Copyright (c) 2022 Andrew Garcia, PhD](LICENSE)
 
-**out.txt**
-
 ```ruby
-DOK:
+array to DOK:
 {
-    "map": [
-        [
-            0
-        ],
-        [
-            1
-        ],
-        [
-            5
-        ],
-        [
-            8
-        ]
-    ],
-    "odims": [
-        10
-    ],
-    "value": [
-        3,
-        3,
-        1,
-        2
-    ]
+	"map": [
+		[1],
+		[4],
+		[5],
+		[8],
+		[9]
+	],
+	"value": [2, 3, 2, 2, 2],
+	"odims": [10]
 }
 
-vectorized array:
-3 3 0 0 0 1 0 0 2 0
+DOK to array:
+[0. 2. 0. 0. 3. 2. 0. 0. 2. 2.]
 ```
