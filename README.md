@@ -2,8 +2,6 @@
 
 Connecting array data between Python and C++ through the use of JSON files. DOK = Dictionary of Keys (json)
 
-[MIT License - Copyright (c) 2022 Andrew Garcia, PhD](LICENSE)
-
 ```ruby
 array to DOK:
 {
