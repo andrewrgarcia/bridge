@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <stdio.h>
-#include "bridge.hpp"
+#include "include/garcia/bridge.hpp"
 
 int main()
 {
@@ -10,10 +10,10 @@ int main()
     std::vector<int> DIMS = {2, 2, 2};
     std::string filename{"sample.json"};
     // pack vector to .json file
-    jsonify(filename, vector0, DIMS);
+    tojson(filename, vector0, DIMS);
 
     // PROCESS JSON FILE BACK TO VECTOR
-    std::vector<int> vector = load(filename);
+    std::vector<int> vector = jsonload(filename);
     // print vector
     std::cout << "\nvectorized array: " << std::endl;
     for (int i = 0; i < vector.size(); i++)

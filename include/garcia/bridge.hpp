@@ -13,7 +13,7 @@
 
 using json = nlohmann::json;
 
-void jsonify(std::string filename, std::vector<int> vector, std::vector<int> DIMS)
+void tojson(std::string filename, std::vector<int> vector, std::vector<int> DIMS)
 {
 
     // int N = (std::cbrt(vector.size()) + 0.5);
@@ -180,7 +180,7 @@ void jsonify(std::string filename, std::vector<int> vector, std::vector<int> DIM
     ofs.close();
 }
 
-std::vector<int> load(std::string filename)
+std::vector<int> jsonload(std::string filename)
 {
     // dictionary of keys (DOK)
     std::cout << "DOK:" << std::endl;
