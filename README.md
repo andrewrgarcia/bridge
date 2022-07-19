@@ -55,7 +55,7 @@ int main()
 **Python**
 
 ```python
-import bridge
+import ponte as bridge
 import numpy as np
 
 'CREATE A 1-D VECTOR'
