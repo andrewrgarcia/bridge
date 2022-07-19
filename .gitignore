@@ -1,5 +1,6 @@
 .vscode
 __pycache__
+extra_figures
 
 #klang-compiled executables
 *.k 
