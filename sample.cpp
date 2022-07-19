@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <stdio.h>
-#include "include/garcia/bridge.hpp"
+// #include "include/garcia/bridge.hpp" // local call
+#include <garcia/bridge.hpp> // global call
 
 int main()
 {
