@@ -1,7 +1,7 @@
 # bridge
 
 ![](logo.png)
-Connecting array data between Python and C++ through the use of JSON files.
+This is an open-source suite of mini-libraries designed to connect array data between Python and C++ through the use of JSON files.
 Python and C++ modules use **tojson** and **jsonload** functions to convert [one- two- and three-dimensional] arrays to .json DOK (Dictionary of Keys) and viceversa, respectively. See Usage Examples below.
 
 ## Contributors
