@@ -16,14 +16,30 @@ Python and C++ modules use **tojson** and **jsonload** functions to convert [one
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-
 ## Installation / Setup
+
+### Dependencies
+
+#### [JSON for Modern C++](https://github.com/nlohmann/json)
+
+```ruby
+# Download JSON repository
+git clone https://github.com/nlohmann/json.git
+
+# Access it
+cd json
+
+#copy as system variable
+sudo cp -R include/nlohmann/ /usr/include/nlohmann
+```
+
+### Bridge suite
 
 ```ruby
 # Download this repository
 git clone https://github.com/andrewrgarcia/bridge.git
 
-# Access cloned directory
+# Access it
 cd bridge
 
 #copy as system variable to call bridge.cpp from anywhere
