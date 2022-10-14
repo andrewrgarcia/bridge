@@ -6,17 +6,10 @@ Python and C++ modules use **tojson** and **jsonload** functions to convert [one
 
 ## Contributions Welcome / Hacktoberfest
 
-Meaningful contributions to the project are always welcome. Participating in Hacktoberfest 2022. Before making a PR, please make sure to read the CONTRIBUTING document.
+Meaningful contributions to the project are always welcome. Participating in Hacktoberfest 2022. Before making a PR, please make sure to read the [CONTRIBUTING](./CONTRIBUTING.md) document.
 
 You may use the Issues section of this repository if you'd like to propose some new ideas/enhancements or report a bug.
 
-## Contributing
-
-1. Fork it (<https://github.com/your-github-user/tensorscout/fork>)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
 
 ## Installation / Setup
 
