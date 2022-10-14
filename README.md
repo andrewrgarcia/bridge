@@ -4,9 +4,11 @@
 This is an open-source suite of mini-libraries designed to connect array data between Python and C++ through the use of JSON files.
 Python and C++ modules use **tojson** and **jsonload** functions to convert [one- two- and three-dimensional] arrays to .json DOK (Dictionary of Keys) and viceversa, respectively. See Usage Examples below.
 
-## Contributors
+## Contributions Welcome / Hacktoberfest
 
-- [Andrew Garcia](https://github.com/andrewrgarcia) - creator and maintainer
+Meaningful contributions to the project are always welcome. Participating in Hacktoberfest 2022. Before making a PR, please make sure to read the CONTRIBUTING document.
+
+You may use the Issues section of this repository if you'd like to propose some new ideas/enhancements or report a bug.
 
 ## Contributing
 
